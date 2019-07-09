@@ -1,6 +1,16 @@
 library(dplyr)
 
-AllHotels <- read.csv("data/Hotel_Reviews.csv")
+#AllHotels <- read.csv("data/Hotel_Reviews.csv")
+
+# HotelsPart1 <- read.csv("data/Hotel_Reviews1.csv")
+# HotelsPart2 <- read.csv("data/Hotel_Reviews2.csv")
+# HotelsPart3 <- read.csv("data/Hotel_Reviews3.csv")
+# HotelsPart4 <- read.csv("data/Hotel_Reviews4.csv")
+# HotelsPart5 <- read.csv("data/Hotel_Reviews5.csv")
+# HotelsPart6 <- read.csv("data/Hotel_Reviews6.csv")
+# AllHotels <- do.call("rbind", list(HotelsPart1, HotelsPart2, HotelsPart3, HotelsPart4, HotelsPart5, HotelsPart6))
+
+AllHotels <- readRDS("data/Hotel_Reviews.rds")
 
 AllHotelsGrouped <- AllHotels %>%
   select(
